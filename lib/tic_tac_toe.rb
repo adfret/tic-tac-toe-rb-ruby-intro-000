@@ -147,7 +147,7 @@ def play(board)
 # def position_taken?(board, index)
 #   !(board[index].nil? || board[index] == " ")
 # end
-# 
+#
 # # Define your WIN_COMBINATIONS constant
 # WIN_COMBINATIONS = [
 #   [0,1,2],
@@ -159,7 +159,7 @@ def play(board)
 #   [0,4,8],
 #   [6,4,2]
 # ]
-# 
+#
 # # Define won?, full?, draw?, over?, and winner below
 # def won?(board)
 #   WIN_COMBINATIONS.detect do |combo|
@@ -168,25 +168,25 @@ def play(board)
 #     position_taken?(board, combo[0])
 #   end
 # end
-# 
+#
 # def full?(board)
 #   board.all?{|token| token == "X" || token == "O"}
 # end
-# 
+#
 # def draw?(board)
 #   !won?(board) && full?(board)
 # end
-# 
+#
 # def over?(board)
 #   won?(board) || full?(board) || draw?(board)
 # end
-# 
+#
 # def winner(board)
 #   if winning_combo = won?(board)
 #     board[winning_combo.first]
 #   end
 # end
-# 
+#
 # def turn_count(board)
 #   counter = 0
 #   board.each do|turn|
@@ -196,7 +196,7 @@ def play(board)
 #   end
 #   counter
 # end
-# 
+#
 # def current_player(board)
 #   if turn_count(board).even?
 #     'X'
@@ -204,8 +204,8 @@ def play(board)
 #     'O'
 #   end
 # end
-# 
-# 
+#
+#
 # # Helper Methods
 # def display_board(board)
 #   puts " #{board[0]} | #{board[1]} | #{board[2]} "
@@ -214,20 +214,20 @@ def play(board)
 #   puts "-----------"
 #   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 # end
-# 
+#
 # def input_to_index(user_input)
 #   user_input.to_i - 1
 # end
-# 
+#
 # def move(board, index, current_player)
 #   board[index] = current_player
 # end
-# 
-# 
+#
+#
 # def valid_move?(board, index)
 #   index.between?(0,8) && !position_taken?(board, index)
 # end
-# 
+#
 # def turn(board)
 #   puts "Please enter 1-9:"
 #   input = gets.strip
@@ -239,9 +239,9 @@ def play(board)
 #     turn(board)
 #   end
 # end
-# 
+#
 # # Define your play method below
-# 
+#
 # def play(board)
 #   while !over?(board)
 #     turn(board)
@@ -251,5 +251,5 @@ def play(board)
 #   elsif draw?(board)
 #     puts "Cat's Game!"
 #   end
-# 
+#
 # end
