@@ -118,7 +118,7 @@ def winner(board)
     elsif board[0] == "O"
       return "O"
     end
-  
+
 
 end
 
