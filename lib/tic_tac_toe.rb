@@ -115,7 +115,9 @@ end
 def winner(board)
 
 
-return false if !won?(board)
+if !won?(board)
+  return nil 
+end 
 combination = won?(board)
   board[combination.first]
 
