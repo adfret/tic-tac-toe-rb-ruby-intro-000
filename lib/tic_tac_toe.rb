@@ -113,9 +113,9 @@ end
 
 def winner(board)
   boards = won?(board)
-    if boards[0].equal?("X")
+    if boards[0] == "X"
       return "X"
-    elsif boards[0].equal?("O")
+    elsif boards[0] == "O"
       return "O"
     else
       return nil
