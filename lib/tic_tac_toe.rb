@@ -119,7 +119,7 @@ if !won?(board)
   return nil
 end
 combination = won?(board)
-  board[combination.first]
+  board[combination[1]]
 
 end
 
