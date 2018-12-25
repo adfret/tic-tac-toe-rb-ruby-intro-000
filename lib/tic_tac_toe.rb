@@ -113,7 +113,7 @@ end
 
 def winner(board)
   board = won?(board)
-    if (board[0]) == "X"
+    if board[0] == "X"
       return "X"
     elsif board[0] == "O"
       return "O"
