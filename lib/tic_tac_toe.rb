@@ -113,7 +113,7 @@ end
 
 
 def winner(board)
-  if boards == won?(board)
+  if boards = won?(board)
     board[boards.first]
   end
 end
