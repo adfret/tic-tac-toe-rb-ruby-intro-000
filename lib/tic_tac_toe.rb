@@ -115,7 +115,7 @@ end
 def winner(board)
   combination = won?(board)
     board[combination.first]
-  end
+  
 end
 
 
