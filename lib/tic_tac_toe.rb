@@ -66,41 +66,29 @@ def current_player(board)
   end
 end
 
+
 def won?(board)
-  WIN_COMBINATIONS.detect do |combo|
-    board[combo[0]] == board[combo[1]] &&
-    board[combo[1]] == board[combo[2]] &&
-    position_taken?(board, combo[0])
+  WIN_COMBINATIONS.each do |i|
+    if (board[i[0]] == "X" and board[i[1]] == "X" and board[i[2]] == "X")
+      return i
+    elsif  board[i[0]] == "O" and board[i[1]] == "O" and board[i[2]] == "O"
+      return i
+    end
   end
+
+  return false
 end
-# def won?(board)
-#   WIN_COMBINATIONS.each do |i|
-#     if (board[i[0]] == "X" and board[i[1]] == "X" and board[i[2]] == "X")
-#       return i
-#     elsif  board[i[0]] == "O" and board[i[1]] == "O" and board[i[2]] == "O"
-#       return i
-#     end
-#   end
-#
-#   return false
-# end
 
 
-
-# def full?(board)
-#   if turn_count(board) == 9
-#     return true
-#   end
-#   return false
-# end
 
 def full?(board)
-   if board.detect {|i| i == " " || i == nil}
-     return false
-   else
-     return true
-   end
- end
+  if turn_count(board) == 9
+    return true
+  end
+  return false
+end
+
+
 
 
 def draw?(board)
