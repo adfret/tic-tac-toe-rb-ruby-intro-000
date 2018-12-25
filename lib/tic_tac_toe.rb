@@ -113,8 +113,8 @@ end
 
 
 def winner(board)
-  if winning_combo = won?(board)
-    board[winning_combo.first]
+  if boards = won?(board)
+    board[boards.first]
   end
 end
 
