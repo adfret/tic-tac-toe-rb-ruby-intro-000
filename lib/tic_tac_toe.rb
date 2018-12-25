@@ -111,17 +111,21 @@ def over?(board)
 end
 end
 
+# def winner(board)
+#   if won?(board)
+#     if board.count{|i| i=="X"}%2 == 0
+#       return "O"
+#     elsif board.count{|i| i=="X"}%2  == 1
+#       return "X"
+#     end
+#   end
+# 
+# end
 def winner(board)
-  if won?(board)
-    if board.count{|i| i=="X"}%2 == 0
-      return "O"
-    elsif board.count{|i| i=="X"}%2  == 1
-      return "X"
-    end
+  if winning_combo = won?(board)
+    board[winning_combo.first]
   end
-
 end
-
 
 
 def play(board)
