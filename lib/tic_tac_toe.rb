@@ -113,10 +113,11 @@ end
 
 
 def winner(board)
-  combination = won?(board)
-    board[combination.first]
+
 
 return false if !won?(board)
+combination = won?(board)
+  board[combination.first]
 
 end
 
